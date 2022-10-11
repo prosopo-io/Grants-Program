@@ -495,10 +495,10 @@ This is a publicly published javascript software development kit (SDK) on [npmjs
 The SDK can be consumed in two ways:
 
 1. Developers can register the Prosopo middleware layer which will fully manage the Prosopo service.
-   [https://github.com/prosopo-io/prosopo/blob/master/captcha-provider-service/index.ts](https://github.com/prosopo-io/prosopo/blob/master/captcha-provider-service/index.ts)
+   [https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/index.ts](https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/index.ts)
 2. Developers can implement the underlying library functions into existing API routes with additional functionality (note they will still need to conform to the REST API specifications to interact with the protocol)
 
-   [https://github.com/prosopo-io/prosopo/blob/master/captcha-provider-service/prosopo/prosopo.d.ts#L35](https://github.com/prosopo-io/planning/blob/master/captcha-provider-service/prosopo/prosopo.d.ts#L35)
+   [https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/prosopo/prosopo.d.ts#L35](https://github.com/prosopo/planning/blob/master/captcha-provider-service/prosopo/prosopo.d.ts#L35)
 
 
 The provided SDK will not provide a fully functional server by itself, and developers will be expected to run a nodejs server and consume the SDK to create the node. That said, it is likely that a reference implementation of a fully functional server will be created and can be copied by developers who are just getting started.
@@ -509,13 +509,13 @@ It should be noted that Providers will be required to submit transactions to the
 
 The following diagram shows a UML diagram for the Captcha Service javascript library.
 
-[https://github.com/prosopo-io/prosopo/blob/master/captcha-provider-service/prosopo/prosopo.d.ts](https://github.com/prosopo-io/planning/blob/master/captcha-provider-service/prosopo/prosopo.d.ts)
+[https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/prosopo/prosopo.d.ts](https://github.com/prosopo/planning/blob/master/captcha-provider-service/prosopo/prosopo.d.ts)
 
 ![UML for the Provider SDK](https://www.prosopo.io/img/captcha_uml.jpg "UML")
 
 The planned database schema can be seen here:
 
-[https://github.com/prosopo-io/prosopo/blob/master/captcha-provider-service/prosopo/dataset.schema.ts](https://github.com/prosopo-io/planning/blob/master/captcha-provider-service/prosopo/dataset.schema.ts)
+[https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/prosopo/dataset.schema.ts](https://github.com/prosopo/planning/blob/master/captcha-provider-service/prosopo/dataset.schema.ts)
 
 ![Database Schema for Captcha Database](https://www.prosopo.io/img/captcha_schema.jpg "Database Schema")
 
@@ -525,9 +525,9 @@ This is a set of external functions exposed in the Prosopo smart contract that a
 
 The Dapp will make either of the following calls in the Prosopo smart contract which will fail if the user is a bot. In this way, smart contracts are protected from bots. The Dapp Operator will choose when and which function to call based on their requirements.
 
-[https://github.com/prosopo-io/prosopo/blob/master/prosopo-contract/lib.rs#L118](https://github.com/prosopo-io/planning/blob/master/prosopo-contract/lib.rs#L118)
+[https://github.com/prosopo/prosopo/blob/master/prosopo-contract/lib.rs#L118](https://github.com/prosopo/planning/blob/master/prosopo-contract/lib.rs#L118)
 
-[https://github.com/prosopo-io/prosopo/blob/master/prosopo-contract/lib.rs#L122](https://github.com/prosopo-io/planning/blob/master/prosopo-contract/lib.rs#L122)
+[https://github.com/prosopo/prosopo/blob/master/prosopo-contract/lib.rs#L122](https://github.com/prosopo/planning/blob/master/prosopo-contract/lib.rs#L122)
 
 #### 2.7.6 Prosopo smart contract
 
@@ -538,7 +538,7 @@ This is the main smart contract which manages the Prosopo system on the Polkadot
 * Dapp Users to commit to solutions and interact with Providers in a low-trust way and gain identity reputation
 * Users and Prosopo Operators to interact with the governance features for disputes resolution
 
-[https://github.com/prosopo-io/prosopo/blob/master/prosopo-contract/lib.rs](https://github.com/prosopo-io/planning/blob/master/prosopo-contract/lib.rs)
+[https://github.com/prosopo/prosopo/blob/master/prosopo-contract/lib.rs](https://github.com/prosopo/planning/blob/master/prosopo-contract/lib.rs)
 
 #### 2.7.7 Token Smart Contract
 
@@ -952,8 +952,8 @@ Development of a prototype contract and command line Provider service has begun 
 
 The code can be viewed at the following links _with permission_. Please request this from [chris@prosopo.io](mailto:chris@prosopo.io).
 
-* [https://github.com/prosopo-io](https://github.com/prosopo-io)
-* [https://github.com/prosopo-io/prosopo](https://github.com/prosopo-io/prosopo)
+* [https://github.com/prosopo](https://github.com/prosopo)
+* [https://github.com/prosopo/prosopo](https://github.com/prosopo/prosopo)
 
 ## 4 Development Status :open_book:
 
