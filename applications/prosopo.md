@@ -337,9 +337,9 @@ The components are:
 
 ### 2.5 Main captcha solving sequence
 
-The below diagram shows the primary fluid that the app users will undertake when they want to use a dapp that uses Propos captcha bot protection.
+The below diagram shows the primary fluid that the app users will undertake when they want to use a dapp that uses Prosopo captcha bot protection.
 
-![Shows the flow of a user through the captcha process](https://www.prosopo.io/img/maincaptchaflow.jpg "Main Captcha Flow")
+![Shows the flow of a user through the captcha process](https://www.prosopo.io/static/maincaptchaflow.jpg "Main Captcha Flow")
 \
 
 
@@ -367,7 +367,7 @@ Low-trust user verification \
 
 6. The Provider responds with two captchas, one which the Provider already knows the answer to, used to perform human validation, and the other which they want to know the answer to. The captcha data is provided in the form of a merkle tree proof which provides the merkle leaf data of the captcha id but not the solution or salt. This can then be used to prove which captcha in the dataset is being committed to by the user.
 
-![Shows the structure of the captcha merkle tree](https://www.prosopo.io/img/captcha_merkle.jpg "Captcha Merkle Tree")
+![Shows the structure of the captcha merkle tree](https://www.prosopo.io/static/captcha_merkle.jpg "Captcha Merkle Tree")
 \
 
 7. When the Dapp User receives the data, the client software will first check that the merkle data corresponds to the on-chain merkle root for the Provider’s data set. They do this by hashing the two leaves they receive per captcha (hash0-0 and hash-0-1 in the above diagram) to retrieve the merkle root. This allows the Dapp User to know that they have received the correct data. The software will automatically report data inconsistencies to the governance functions in the Prosopo smart contract. This is monitored by the Dapp and Prosopo operators to ensure that Providers are not sending false data to users. \
@@ -382,7 +382,7 @@ Low-trust user verification \
 
 12.The Provider responds to the Dapp client (with the solutions) confirming that the user correctly submitted the captcha and that the reputation of the Dapp User has been updated on the blockchain. The Provider will also respond with the merkle tree proof including the leaf with the known solution and salt in their data set.
 
-![Shows the structure of the captcha merkle tree, highlighting the leaves required to prove that the solution is genuine](https://www.prosopo.io/img/captcha_merkle_highlight.jpg "Captcha Merkle Tree highlighted")
+![Shows the structure of the captcha merkle tree, highlighting the leaves required to prove that the solution is genuine](https://www.prosopo.io/static/captcha_merkle_highlight.jpg "Captcha Merkle Tree highlighted")
 
 13. The Dapp User uses the merkle tree proof and compares this against their solution. They are then able to verify that their solution was correct (or incorrect) according to the Provider’s data set. If there is an inconsistency between the solutions, the Dapp User is able to prove that the Provider has incorrectly matched their solution and can report this to the Prosopo Operators through one of the governance functions of the smart contract. They also verify that the Provider has indeed made a transaction to update their reputation.
 
@@ -511,13 +511,13 @@ The following diagram shows a UML diagram for the Captcha Service javascript lib
 
 [https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/prosopo/prosopo.d.ts](https://github.com/prosopo/planning/blob/master/captcha-provider-service/prosopo/prosopo.d.ts)
 
-![UML for the Provider SDK](https://www.prosopo.io/img/captcha_uml.jpg "UML")
+![UML for the Provider SDK](https://www.prosopo.io/static/captcha_uml.jpg "UML")
 
 The planned database schema can be seen here:
 
 [https://github.com/prosopo/prosopo/blob/master/captcha-provider-service/prosopo/dataset.schema.ts](https://github.com/prosopo/planning/blob/master/captcha-provider-service/prosopo/dataset.schema.ts)
 
-![Database Schema for Captcha Database](https://www.prosopo.io/img/captcha_schema.jpg "Database Schema")
+![Database Schema for Captcha Database](https://www.prosopo.io/static/captcha_schema.jpg "Database Schema")
 
 #### 2.7.5 Dapp Smart Contract
 
