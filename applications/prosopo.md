@@ -317,7 +317,7 @@ The Prosopo solution consists of three layers, as depicted in the software archi
 2. Server - There is one server component for the Provider. These are considered low Trust services due to the cryptography involved, as explained below. \
 3. Blockchain - these are smart contracts that run on a substrate parachain. These contracts facilitate the low-trust interactions between the users of the system. The contracts will be executed by the relevant parachain validators and allow real-time cryptographic auditing of the system. The majority of on-chain content is merely cryptographic proofs which do not reveal any of the relevant captcha data that would compromise the system to bots.
 
-![Shows the client, server, and blockchain architecture according to the various clients - captcha client, user portal, and operator portal](https://prosopo.io/img/clientserverblockchain.jpg "Client Server Blockchain architecture")
+![Shows the client, server, and blockchain architecture according to the various clients - captcha client, user portal, and operator portal](https://prosopo.io/static/clientserverblockchain.jpg "Client Server Blockchain architecture")
 
 The components are:
 
